@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&display=swap');
+
+.brand__name {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+section.hero {
+    @apply block md:grid;
+    grid-template-columns: .4fr .6fr;
+}
+
+select, input[type='email'], input[type='password'], input[type='text'],input[type='tel'] {
+    @apply block w-full mb-2 rounded-xl;
+    @apply block border p-2 border-slate-300 bg-slate-100
+}
+
+input[type='email']:disabled, input[type='tel']:disabled, input[type='password']:disabled, input[type='text']:disabled {
+    @apply bg-slate-300 border-0 text-slate-500;
+}
+
+button, .button {
+    @apply block w-full text-slate-700 font-semibold;
+    @apply border rounded-xl border-slate-500 px-6 py-2;
+}
+
+button[type='submit'], .submit {
+    @apply border-0 bg-primary text-white;
+}
+
+button[type='submit']:disabled, .submit:disabled {
+    @apply cursor-not-allowed bg-red-400;
+}
+
+.oauth:disabled {
+    @apply cursor-not-allowed;
+}
+
+label {
+    @apply text-slate-500 text-sm leading-3;
+}
+
+label + input {
+    margin-top: -2px;
+}
+
+div.tabs > * {
+    @apply bg-slate-300 text-slate-700 rounded-full p-2 px-4;
+}
+
+div.tabs > *.active{
+    @apply bg-primary text-white rounded-full p-2 px-4;
+}
